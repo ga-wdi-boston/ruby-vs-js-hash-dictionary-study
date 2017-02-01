@@ -41,7 +41,7 @@ should be symbols.
 ```ruby
 dale = {
   family_name: "gribble",
-  given-name: "dale",
+  :'given-name': "dale",
   occupation: "exterminator"
 }
 ```
@@ -72,7 +72,7 @@ value of the key `given-name` is "Dale".
 
 ```ruby
 dale[:family_name][0] = dale[:family_name][0].upcase
-dale[:given-name][0] = dale[:given-name][0].upcase
+dale[:given-name][0] = dale[:'given-name'][0].upcase
 ```
 
 ## Ruby Hash Methods
@@ -92,7 +92,7 @@ Using Hash methods and string interpolation in Ruby, create a string using
 conspiracy theories.".
 
 ```ruby
-"My name is #{dale[:given-name]} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies][1]}"
+"My name is #{dale[:'given-name']} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies][1]}"
 ```
 
 ## Creating a Dictionary in JavaScript
@@ -141,7 +141,7 @@ of the key `given-name` is "Hank".
 
 ```javascript
 hank.family_name = 'Hill';
-hank.given-name = 'Hank';
+hank['given-name'] = 'Hank';
 ```
 
 ## JavaScript Dictionary Methods
@@ -151,6 +151,7 @@ keys.  Additionally, set a variable named `hankValues` to `hanks`'s values.'
 
 ```javascript
 hankKeys = hank.keys();
+hankValues = hank.values();
 ```
 
 ## Accessing Dictionary Properties and Values
@@ -160,5 +161,5 @@ using `hank` that equals "My name is Hank Hill and I'm a propane and propane
 accesories salesman that enjoys drinking beer.".
 
 ```javascript
-`My name is ${hank.given-name} ${hank.family_name} and I'm a ${hank.occupation} that enjoys ${hank.hobbies[0]}`;
+`My name is ${hank['given-name']} ${hank.family_name} and I'm a ${hank.occupation} that enjoys ${hank.hobbies[0]}`;
 ```
