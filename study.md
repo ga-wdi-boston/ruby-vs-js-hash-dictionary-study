@@ -41,7 +41,7 @@ should be symbols.
 ```ruby
 dale = Hash.new({})
 dale[:family_name] = "gribble"
-dale[:given_name] = "dale"
+dale[:"given-name"] = "dale"
 dale[:occupation] = "exterminator"
 ```
 
@@ -52,7 +52,7 @@ should contain two strings, "drinking beer" and "conspiracy theories".  The keys
 should be symbols.
 
 ```ruby
-dale[:middle_name] = "Alvin"
+dale[:"middle name"] = "Alvin"
 dale[:hobbies] = ["drinking beer", "conspiracy theories"]
 ```
 
@@ -61,7 +61,7 @@ dale[:hobbies] = ["drinking beer", "conspiracy theories"]
 Remove the `middle name` key from `dale`.
 
 ```ruby
-dale.delete(:middle_name)
+dale.delete(:"middle name")
 ```
 
 ## Modifying Hash Values in Ruby
@@ -71,7 +71,7 @@ value of the key `given-name` is "Dale".
 
 ```ruby
 dale[:family_name] = "Gribble"
-dale[:given_name] = "Dale"
+dale[:"given-name"] = "Dale"
 ```
 
 ## Ruby Hash Methods
@@ -91,7 +91,7 @@ Using Hash methods and string interpolation in Ruby, create a string using
 conspiracy theories.".
 
 ```ruby
-puts "My name is #{dale[:given_name]} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies][1]}."
+puts "My name is #{dale[:"given-name"]} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies][1]}."
 ```
 
 ## Creating a Dictionary in JavaScript
@@ -108,7 +108,7 @@ pairs.
 ```javascript
 let hank = {
   family_name: 'hill',
-  given_name: 'hank',
+  'given-name': 'hank',
   occupation: 'propane and propane accessories salesman',
 };
 ```
@@ -121,7 +121,7 @@ The array should contain two strings, "drinking beer" and "propane and propane
 accessories".
 
 ```javascript
-hank.middle_name = 'hank';
+hank['middle name'] = 'hank';
 hank.hobbies = ['drinking beer', 'propane and propane accessories'];
 ```
 
@@ -130,7 +130,7 @@ hank.hobbies = ['drinking beer', 'propane and propane accessories'];
 Remove the `middle name` property from `hank`.
 
 ```javascript
-delete hank.middle_name;
+delete hank['middle name'];
 ```
 
 ## Modifying Dictionary Values in JavaScript
@@ -140,7 +140,7 @@ of the key `given-name` is "Hank".
 
 ```javascript
 hank.family_name = 'Hill';
-hank.given_name = 'Hank';
+hank['given-name'] = 'Hank';
 ```
 
 ## JavaScript Dictionary Methods
@@ -160,5 +160,5 @@ using `hank` that equals "My name is Hank Hill and I'm a propane and propane
 accesories salesman that enjoys drinking beer.".
 
 ```javascript
-console.log("My name is ${hank.given_name} ${hank.family_name} and I'm a ${hank.occupation} that enjoys ${hank.hobbies[0]}".)
+console.log("My name is " + hank['given-name'] + " " + hank.family_name +  " and I'm a " + hank.occupation + " that enjoys " + hank.hobbies[0] + ".")
 ```
