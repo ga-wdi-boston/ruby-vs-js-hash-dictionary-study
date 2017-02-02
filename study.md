@@ -39,7 +39,8 @@ should be symbols.
 | occupation | 'exterminator' |
 
 ```ruby
-dale = { family_name: 'gribble', given_name: 'dale', occupation: 'exterminator' }
+
+dale = { family_name: 'gribble', :"given-name" => 'dale', occupation: 'exterminator' }
 ```
 
 ## Adding Hash Keys in Ruby
@@ -49,7 +50,7 @@ should contain two strings, "drinking beer" and "conspiracy theories".  The keys
 should be symbols.
 
 ```ruby
-dale[:middle_name] = "Alvin"
+dale[:"middle name"] = "Alvin"
 dale[:hobbies] = ["drinking beer", "conspiracy theories"]
 ```
 
@@ -58,7 +59,7 @@ dale[:hobbies] = ["drinking beer", "conspiracy theories"]
 Remove the `middle name` key from `dale`.
 
 ```ruby
-dale.delete(:middle_name)
+dale.delete(:"middle name")
 ```
 
 ## Modifying Hash Values in Ruby
@@ -68,7 +69,7 @@ value of the key `given-name` is "Dale".
 
 ```ruby
 dale[:family_name] = "Gribble"
-dale[:given_name] = "Dale"
+dale[:"given-name"] = "Dale"
 ```
 
 ## Ruby Hash Methods
@@ -88,7 +89,7 @@ Using Hash methods and string interpolation in Ruby, create a string using
 conspiracy theories.".
 
 ```ruby
-"My name is #{dale[:given_name]} #{dale[:family_name]} and I’m an #{dale[:occupation]} that enjoys #{dale[:hobbies][1]}."
+"My name is #{dale[:"given-name"]} #{dale[:family_name]} and I’m an #{dale[:occupation]} that enjoys #{dale[:hobbies][1]}."
 ```
 
 ## Creating a Dictionary in JavaScript
@@ -103,7 +104,7 @@ pairs.
 | occupation | 'propane and propane accessories salesman' |
 
 ```javascript
-let hank = {family_name: 'hill', given_name: 'hank', occupation: 'propane and propane accessories salesman'};
+let hank = {family_name: 'hill', "given-name": 'hank', occupation: 'propane and propane accessories salesman'};
 ```
 
 ## Adding Dictionary Properties in JavaScript
@@ -114,7 +115,7 @@ The array should contain two strings, "drinking beer" and "propane and propane
 accessories".
 
 ```javascript
-Hank.middle_name = "Rutherford";
+hank["middle name"] = "Rutherford";
 hank.hobbies = ["drinking beer", "propane and propane accessories"];
 ```
 
@@ -123,7 +124,7 @@ hank.hobbies = ["drinking beer", "propane and propane accessories"];
 Remove the `middle name` property from `hank`.
 
 ```javascript
-delete hank.middle_name;
+delete hank["middle name"];
 ```
 
 ## Modifying Dictionary Values in JavaScript
@@ -133,7 +134,7 @@ of the key `given-name` is "Hank".
 
 ```javascript
 hank.family_name = 'Hill';
-hank.given_name = 'Hank';
+hank.name = 'Hank';
 ```
 
 ## JavaScript Dictionary Methods
@@ -148,19 +149,8 @@ or
 let hankValues = [];
 for (let key in hank) {
   hankValues.push(hank[key]);
-  //Why does hank[given_name] work while running this function but
-  //not in node. Visa versa with hank.given name. Doesn't work
-  //inside this function but in outside it works fine. WHY?!?
-  //How can you use .this to make this loop work.
 };
-or
-let hankValues = [];
-for (let key in hank) {
-   if (hank.hasOwnProperty(key)) {
-      let obj = hank[key];
-      hankValues.push(obj);
-   };
-};
+
 
 ```
 
@@ -172,5 +162,5 @@ accesories salesman that enjoys drinking beer.".
 
 ```javascript
 
-`My name is ${hank.given_name} ${hank.family_name} and I'm a ${hank.occupation} that enjoys ${hank.hobbies[0]}`
+`My name is ${hank["given-name"]} ${hank.family_name} and I\`m a ${hank.occupation} that enjoys ${hank.hobbies[0]}`
 ```
