@@ -39,7 +39,11 @@ should be symbols.
 | occupation | 'exterminator' |
 
 ```ruby
-# your answer here
+dale = Hash.new
+dale[:family_name] = 'gribble'
+dale[:given_name] = 'dale'
+dale[:occupation] = 'exterminator'
+puts dale
 ```
 
 ## Adding Hash Keys in Ruby
@@ -49,7 +53,8 @@ should contain two strings, "drinking beer" and "conspiracy theories".  The keys
 should be symbols.
 
 ```ruby
-#your answer here
+dale[:middle_name] = 'alvin'
+dale[:hobbies] = {'drinking beer', 'conspiracy theories'}
 ```
 
 ## Removing Hash Keys in Ruby
@@ -57,7 +62,7 @@ should be symbols.
 Remove the `middle name` key from `dale`.
 
 ```ruby
-# your answer here
+dale.remove[:middle_name]
 ```
 
 ## Modifying Hash Values in Ruby
@@ -66,7 +71,8 @@ Modify `dale` so that the value of the key `family_name` is "Gribble" and the
 value of the key `given-name` is "Dale".
 
 ```ruby
-# your answer here
+dale[:family_name] = 'dale'
+dale[:given_name] = 'gribble'
 ```
 
 ## Ruby Hash Methods
