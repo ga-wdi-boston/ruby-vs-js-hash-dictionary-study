@@ -38,8 +38,14 @@ should be symbols.
 | given-name | 'dale' |
 | occupation | 'exterminator' |
 
-```ruby
-# your answer here
+```
+
+# haha dale gribble is awesome
+
+dale[:family_name]  = 'gribble'
+dale[:given_name] = 'dale'
+dale[:occupation] = 'exterminator'
+
 ```
 
 ## Adding Hash Keys in Ruby
@@ -49,7 +55,7 @@ should contain two strings, "drinking beer" and "conspiracy theories".  The keys
 should be symbols.
 
 ```ruby
-#your answer here
+dale[:middle_name] = 'alvin'
 ```
 
 ## Removing Hash Keys in Ruby
@@ -57,7 +63,7 @@ should be symbols.
 Remove the `middle name` key from `dale`.
 
 ```ruby
-# your answer here
+dale.delete(:middle_name)
 ```
 
 ## Modifying Hash Values in Ruby
@@ -66,7 +72,8 @@ Modify `dale` so that the value of the key `family_name` is "Gribble" and the
 value of the key `given-name` is "Dale".
 
 ```ruby
-# your answer here
+dale[:family_name] = "Gribble"
+dale[:given_name] = "Dale"
 ```
 
 ## Ruby Hash Methods
@@ -75,7 +82,8 @@ Using Ruby's Hash methods, set a variable named `dale_keys` to `dale`'s keys.
 Additionally, set a variable named `dale_values` to `dale`'s values.'
 
 ```ruby
-# your answer here
+dale_keys = dale.keys
+dale_values = dale.values
 ```
 
 ## Accessing Hash Properties and Values
@@ -85,7 +93,8 @@ Using Hash methods and string interpolation in Ruby, create a string using
 conspiracy theories.".
 
 ```ruby
-# your answer here
+"My name is #{dale.given_name} #{dale.family_name} and I'm an #{dale.occupation} that enjoys
+conspiracy theories."
 ```
 
 ## Creating a Dictionary in JavaScript
@@ -99,8 +108,15 @@ pairs.
 | given-name | 'hank' |
 | occupation | 'propane and propane accessories salesman' |
 
-```javascript
-// your answer here
+```js
+const hank = []
+
+hank.push({
+    familyName: 'hill',
+    givenName: 'hank'
+})
+hank.occupation = 'propane and propane accessories salesman'
+
 ```
 
 ## Adding Dictionary Properties in JavaScript
@@ -111,7 +127,10 @@ The array should contain two strings, "drinking beer" and "propane and propane
 accessories".
 
 ```javascript
-// your answer here
+
+hank.middleName = 'Rutherford'
+hank.hobbies = ['drinking beer', 'propane and propane accessories']
+
 ```
 
 ## Removing Dictionary Properties in JavaScript
@@ -119,7 +138,7 @@ accessories".
 Remove the `middle name` property from `hank`.
 
 ```javascript
-// your answer here
+hank.pop('middleName')
 ```
 
 ## Modifying Dictionary Values in JavaScript
@@ -128,7 +147,8 @@ Modify `hank` so that the value of the key `family_name` is "Hill" and the value
 of the key `given-name` is "Hank".
 
 ```javascript
-// your answer here
+hank.family_name = 'Hill'
+hank.given_name = 'Hank'
 ```
 
 ## JavaScript Dictionary Methods
@@ -137,7 +157,8 @@ Using JavaScript's Array methods, set a variable named `hankKeys` to `hank`'s
 keys.  Additionally, set a variable named `hankValues` to `hanks`'s values.'
 
 ```javascript
-// your answer here
+hankKeys = Object.keys(hank)
+hankValues = Object.values(hank)
 ```
 
 ## Accessing Dictionary Properties and Values
@@ -147,5 +168,5 @@ using `hank` that equals "My name is Hank Hill and I'm a propane and propane
 accesories salesman that enjoys drinking beer.".
 
 ```javascript
-// your answer here
+console.log('My name is ' + hank.given_name + ' ' + hank.family_name + ' and Im a ' + hank.occupation + ' that enjoys ' + hank.hobbies[0])
 ```
