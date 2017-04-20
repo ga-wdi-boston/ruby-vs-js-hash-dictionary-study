@@ -39,7 +39,9 @@ should be symbols.
 | occupation | 'exterminator' |
 
 ```ruby
-# your answer here
+dale = { family_name: 'gribble', given_name: 'dale', occupation: 'exterminator' }
+
+# dale => {:family_name=>"gribble", :given_name=>"dale", :occupation=>"exterminator"}
 ```
 
 ## Adding Hash Keys in Ruby
@@ -49,7 +51,15 @@ should contain two strings, "drinking beer" and "conspiracy theories".  The keys
 should be symbols.
 
 ```ruby
-#your answer here
+dale[:middle_name] = 'Alvin'
+dale[:hobbies] = ['drinking beer', 'conspiracy theories']
+
+# dale => {:family_name=>"gribble",
+# :given_name=>"dale",
+# :occupation=>"exterminator",
+# :middle_name=>"Alvin",
+# :hobbies=>["drinking beer", "conspiracy theories"]}
+
 ```
 
 ## Removing Hash Keys in Ruby
@@ -57,7 +67,12 @@ should be symbols.
 Remove the `middle name` key from `dale`.
 
 ```ruby
-# your answer here
+dale.delete(:middle_name)
+
+# dale => {:family_name=>"gribble",
+# :given_name=>"dale",
+# :occupation=>"exterminator",
+# :hobbies=>["drinking beer", "conspiracy theories"]}
 ```
 
 ## Modifying Hash Values in Ruby
@@ -66,7 +81,14 @@ Modify `dale` so that the value of the key `family_name` is "Gribble" and the
 value of the key `given-name` is "Dale".
 
 ```ruby
-# your answer here
+dale[:family_name] = 'Gribble'
+dale[:given_name] = 'Dale'
+
+# dale => {:family_name=>"Gribble",
+# :given_name=>"Dale",
+# :occupation=>"exterminator",
+# :hobbies=>["drinking beer", "conspiracy theories"]}
+
 ```
 
 ## Ruby Hash Methods
@@ -75,7 +97,11 @@ Using Ruby's Hash methods, set a variable named `dale_keys` to `dale`'s keys.
 Additionally, set a variable named `dale_values` to `dale`'s values.'
 
 ```ruby
-# your answer here
+dale_keys = dale.keys
+dale_values = dale.values
+
+# dale_keys => [:family_name, :given_name, :occupation, :hobbies]
+# dale_values => ["Gribble", "Dale", "exterminator", ["drinking beer", "conspiracy theories"]]
 ```
 
 ## Accessing Hash Properties and Values
@@ -85,7 +111,9 @@ Using Hash methods and string interpolation in Ruby, create a string using
 conspiracy theories.".
 
 ```ruby
-# your answer here
+response = "My name is #{dale[:given_name]} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies][-1]}."
+
+# response => "My name is Dale Gribble and I'm an exterminator that enjoys conspiracy theories."
 ```
 
 ## Creating a Dictionary in JavaScript
@@ -100,7 +128,15 @@ pairs.
 | occupation | 'propane and propane accessories salesman' |
 
 ```javascript
-// your answer here
+const hank = {
+  family_name: 'hill',
+  given_name: 'hank',
+  occupation: 'propane and propane accessories salesman'
+}
+
+// { family_name: 'hill',
+//   given_name: 'hank',
+//   occupation: 'propane and propane accessories salesman'}
 ```
 
 ## Adding Dictionary Properties in JavaScript
@@ -111,7 +147,14 @@ The array should contain two strings, "drinking beer" and "propane and propane
 accessories".
 
 ```javascript
-// your answer here
+hank.middle_name = 'Rutherford'
+hank.hobbies = ['drinking beer', 'propane and propane accessories']
+
+// { family_name: 'hill',
+//  given_name: 'hank',
+//  occupation: 'propane and propane accessories salesman',
+//  middle_name: 'Rutherford',
+//  hobbies: [ 'drinking beer', 'propane and propane accessories' ] }
 ```
 
 ## Removing Dictionary Properties in JavaScript
@@ -119,7 +162,13 @@ accessories".
 Remove the `middle name` property from `hank`.
 
 ```javascript
-// your answer here
+delete hank.middle_name
+
+// { family_name: 'hill',
+//   given_name: 'hank',
+//   occupation: 'propane and propane accessories salesman',
+//   hobbies: [ 'drinking beer', 'propane and propane accessories' ] }
+
 ```
 
 ## Modifying Dictionary Values in JavaScript
@@ -128,7 +177,13 @@ Modify `hank` so that the value of the key `family_name` is "Hill" and the value
 of the key `given-name` is "Hank".
 
 ```javascript
-// your answer here
+hank.family_name = 'Hill'
+hank.given_name = 'Hank'
+
+// { family_name: 'Hill',
+//   given_name: 'Hank',
+//   occupation: 'propane and propane accessories salesman',
+//   hobbies: [ 'drinking beer', 'propane and propane accessories' ] }
 ```
 
 ## JavaScript Dictionary Methods
@@ -137,7 +192,15 @@ Using JavaScript's Array methods, set a variable named `hankKeys` to `hank`'s
 keys.  Additionally, set a variable named `hankValues` to `hanks`'s values.'
 
 ```javascript
-// your answer here
+const hankKeys = Object.keys(hank)
+const hankValues = []
+hankKeys.forEach(key => hankValues.push(hank[key]))
+
+// [ 'family_name', 'given_name', 'occupation', 'hobbies' ]
+// [ 'Hill',
+//   'Hank',
+//   'propane and propane accessories salesman',
+//   [ 'drinking beer', 'propane and propane accessories' ] ]
 ```
 
 ## Accessing Dictionary Properties and Values
@@ -147,5 +210,7 @@ using `hank` that equals "My name is Hank Hill and I'm a propane and propane
 accesories salesman that enjoys drinking beer.".
 
 ```javascript
-// your answer here
+const response = `My name is ${hank.given_name} ${hank.family_name} and I'm a ${hank.occupation} that enjoys ${hank.hobbies[0]}.`
+
+// 'My name is Hank Hill and I'm a propane and propane accessories salesman that enjoys drinking beer.'
 ```
