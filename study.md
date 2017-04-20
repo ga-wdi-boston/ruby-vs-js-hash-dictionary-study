@@ -40,6 +40,7 @@ should be symbols.
 
 ```ruby
 # your answer here
+ dale = {:family_name => 'gribble', :given_name => 'dale', :occupation => 'exterminator'}
 ```
 
 ## Adding Hash Keys in Ruby
@@ -50,6 +51,9 @@ should be symbols.
 
 ```ruby
 #your answer here
+dale[:middle_name] = 'Alvin'
+dale[:hobbies] = ['drinking beer', 'conspiracy theories']
+
 ```
 
 ## Removing Hash Keys in Ruby
@@ -58,6 +62,7 @@ Remove the `middle name` key from `dale`.
 
 ```ruby
 # your answer here
+dale.delete(:middle_name)
 ```
 
 ## Modifying Hash Values in Ruby
@@ -67,6 +72,8 @@ value of the key `given-name` is "Dale".
 
 ```ruby
 # your answer here
+dale[:family_name] = "Gribble"
+dale[:given_name] = "Dale"
 ```
 
 ## Ruby Hash Methods
@@ -76,6 +83,8 @@ Additionally, set a variable named `dale_values` to `dale`'s values.'
 
 ```ruby
 # your answer here
+dale_keys = dale.keys
+dale_values = dale.values
 ```
 
 ## Accessing Hash Properties and Values
@@ -86,6 +95,7 @@ conspiracy theories.".
 
 ```ruby
 # your answer here
+puts "My name is #{dale[:given_name]} #{dale[:family_name]} and I'm an #{dale[:occupation]} that enjoys #{dale[:hobbies][1]}"
 ```
 
 ## Creating a Dictionary in JavaScript
@@ -101,6 +111,11 @@ pairs.
 
 ```javascript
 // your answer here
+let hank = {
+  familyName: 'hill',
+  givenName: 'hank',
+  occupation: 'propane and propane accessories salesman'
+}
 ```
 
 ## Adding Dictionary Properties in JavaScript
@@ -112,6 +127,8 @@ accessories".
 
 ```javascript
 // your answer here
+hank.middleName = 'Rutherford'
+hank.hobbies = ['drinking beer', 'propane and propane accessories']
 ```
 
 ## Removing Dictionary Properties in JavaScript
@@ -120,6 +137,7 @@ Remove the `middle name` property from `hank`.
 
 ```javascript
 // your answer here
+delete hank.middleName
 ```
 
 ## Modifying Dictionary Values in JavaScript
@@ -129,6 +147,8 @@ of the key `given-name` is "Hank".
 
 ```javascript
 // your answer here
+hank.familyName = "Hill"
+hank.givenName = "Hank"
 ```
 
 ## JavaScript Dictionary Methods
@@ -138,6 +158,8 @@ keys.  Additionally, set a variable named `hankValues` to `hanks`'s values.'
 
 ```javascript
 // your answer here
+const hankKeys = Object.keys(hank)
+const hankValues = Object.values(hank)
 ```
 
 ## Accessing Dictionary Properties and Values
@@ -148,4 +170,6 @@ accesories salesman that enjoys drinking beer.".
 
 ```javascript
 // your answer here
+console.log("My name is " + hank.givenName + " " + hank.familyName + " and I'm a "
++ hank.occupation + " that enjoys " + hank.hobbies[0])
 ```
