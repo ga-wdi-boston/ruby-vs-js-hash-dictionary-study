@@ -182,6 +182,5 @@ accesories salesman that enjoys drinking beer.".
 //   givenName = 'hank',
 //   occupation = 'propane and propane accessories salesman'
 // }
-
 const string = `My name is ${hank.giveName}${hank.familyName} and I'm a ${hank.occupation} that enjoys ${hank.hobbies[0]}.`
 ```
